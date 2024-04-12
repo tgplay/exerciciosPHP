@@ -1,24 +1,24 @@
 <?php
 class Caneta{
-    // Atributos
-    var $modelo;
-    var $cor;
-    var $ponta;
-    var $carga;
-    var $tampada;
+    public $modelo;
+    public $cor;
+    private $ponta;
+    protected $carga;
+    public $tampada;
 
-    function rabiscar(){
+    public function rabiscar(){
+        // Para verificar um atributo dentro da própria classe, usa-se o $this 
         if($this->tampada == true){
-            echo "<p>Erro! Não posso rabiscar! Caneta tampada.</p>";
+            echo "<p>Erro! Não posso rabiscar!</p>";
         } else {
             echo "<p>Estou rabiscando...</p>";
         }
         
     }
-    function tampar(){
+    public function tampar(){
         $this->tampada = true;
     }
-    function destampar(){
+    public function destampar(){
         $this->tampada = false;
     }
 
