@@ -10,7 +10,14 @@
             <?php 
                 require_once 'Caneta.php';
 
-                $c1 = new Caneta("BIC", "Azul", 0.5);
+                $c1 = new Caneta();
+                $c1->setModelo("BIC");
+                // $c1->modelo = 'Bic'; , dessa forma consigo setar diretamente um atributo da classe, desde que ele seja público.
+                
+                $c1->setPonta(0.5);
+                // $c1->ponta = 0.5; , dessa forma consigo setar diretamente um atributo da classe, desde que ele seja público. Se não for público, não será possível. Dará erro.
+
+
                 print_r($c1);
                 
             ?>
